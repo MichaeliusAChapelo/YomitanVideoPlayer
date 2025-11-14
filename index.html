@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Local Video Player</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body style="background-color: black; color: white;">
+
+    Select video: <input type="file" id="load-video" @change="handleFileVideo" accept="video/mp4">
+    <br>
+    Select subtitles: <input type="file" id="load-subtitle" @change="handleFileSubtitle" accept="application/json">
+    <br>
+
+    <figure id="videoContainer" style="text-align: center;">
+
+        <video width="1280" height="720" id="video" controls>
+            <source id="videoSource" src="video.mp4" type="video/mp4" />
+            <!-- <source src="video.webm" type="video/webm" /> -->
+            <!-- <source src="video.ogg" type="video/ogg" /> -->
+        </video>
+
+        <br>
+        <br>
+
+        <div id="subtitleDisplay" style="font-size:xx-large;">Subtitles will be displayed here.</div>
+
+    </figure>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
